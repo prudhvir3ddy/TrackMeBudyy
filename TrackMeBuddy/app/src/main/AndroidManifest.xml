@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.errorlabs.trackmebuddy">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <permission-group
+        android:name="android.permission-group.LOCATION"
+        android:label="A label for your permission"
+        />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activities.Splash"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.Login"
+            android:parentActivityName=".Activities.MainScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Register"
+            android:parentActivityName=".Activities.MainScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.MainScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.HomeScreen" />
+
+        <service android:name=".Activities.GPS_Service"/>
+
+    </application>
+
+</manifest>
