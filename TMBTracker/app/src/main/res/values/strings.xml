@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TMB Tracker</string>
+    <string name="APPKEY">TrackMeBuddyAPPKEY@ErrorLabs.in</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
